@@ -17,7 +17,7 @@ Initialize new pad. To save memory, this may be done at the start of a loop.
 
 hk_ functions
 
-Functions in this library start with `hk_` prefix see `strclass.def` for a full list of exported functions. The convention is to pass a reference to `pad_ptr` as the first argument.
+Functions in this library start with `hk_` prefix. See `strclass.def` for a full list of exported functions. The convention is to pass a reference to `pad_ptr` as the first argument.
 Example:
 
 `char * hk_substr(&pad_ptr, char* string, int start, int length);`
