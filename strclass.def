@@ -1,0 +1,11 @@
+LIBRARY strclass.dll
+
+EXPORTS
+hk_cleanup
+hk_malloc
+hk_print
+hk_realloc
+hk_strcat
+hk_strdup
+hk_strncat
+hk_strndup
