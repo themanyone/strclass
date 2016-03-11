@@ -20,7 +20,9 @@ hk_ functions
 
 Functions in this library start with hk_
 The convention is to pass a reference to pad_ptr as the first argument.
-Example: `char * hk_substr(&pad_ptr, char* string, int start, int length);`
+Example:
+
+`char * hk_substr(&pad_ptr, char* string, int start, int length);`
 
 Return value: Most hk_ functions return a char* from malloc().
 This string would ordinarily need to be free()'d, but...
@@ -33,9 +35,11 @@ char *p2 = hk_strncat (&pad_ptr, p1, "e party week.", 7); p2 = "rave party"
 ```
 
 It is OK to reassign pointers; pad_ptr hasn't forgotten the old memory.
+
 `char *p2 = hk_strdup (&pad_ptr, "This is a test"); >p2 = "This is a test"`
 
 Use hk_print to debug or print out contents of pad.
+
 `hk_print (&pad_ptr); Prints "rave party" and "This is a test"`
 
 `hk_cleanup (&pad_ptr); // free up this pad`
