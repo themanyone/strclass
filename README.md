@@ -25,13 +25,13 @@ Example:
 Return value: Most hk_ functions return a `char*` from `malloc()`. This string would ordinarily need to be `free()`'d, but the `pad_ptr` reference counter keeps track of every memory allocation. Running `hk_cleanup (&pad_ptr)` cleans up all the strings allocated to that pad. This may need to be done periodically in a loop.
 
 ```
-char *p1 = hk_substr (&pad_ptr,"Travis"+1, 3); p1 = "rav"
-char *p2 = hk_strncat (&pad_ptr, p1, "e party week.", 7); p2 = "rave party"
+char *p1 = hk_substr (&pad_ptr,"Travis"+1, 3); // p1 = "rav"
+char *p2 = hk_strncat (&pad_ptr, p1, "e party week.", 7); // p2 = "rave party"
 ```
 
 It is OK to reassign pointers; `pad_ptr` hasn't forgotten the old memory.
 
-`char *p2 = hk_strdup (&pad_ptr, "This is a test"); >p2 = "This is a test"`
+`char *p2 = hk_strdup (&pad_ptr, "This is a test"); // p2 = "This is a test"`
 
 Use `hk_print(&pad_ptr);` to debug or print out contents of pad.
 
